@@ -1,0 +1,6 @@
+framework module Pods_JKDateHelper_Tests {
+  umbrella header "Pods-JKDateHelper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

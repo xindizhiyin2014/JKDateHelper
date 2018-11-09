@@ -1,0 +1,23 @@
+PODS:
+  - JKDateHelper (0.1.0)
+  - Kiwi (3.0.0)
+
+DEPENDENCIES:
+  - JKDateHelper (from `../`)
+  - Kiwi
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kiwi
+
+EXTERNAL SOURCES:
+  JKDateHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JKDateHelper: 4b777c3e8a3168853dfc930b8933fc1872e07d8f
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+
+PODFILE CHECKSUM: 42ab4277673b969fc46b573a1c305bffe1f6b6b2
+
+COCOAPODS: 1.5.3

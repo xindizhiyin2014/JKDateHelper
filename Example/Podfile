@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JKDateHelper_Example' do
+  pod 'JKDateHelper', :path => '../'
+
+  target 'JKDateHelper_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
