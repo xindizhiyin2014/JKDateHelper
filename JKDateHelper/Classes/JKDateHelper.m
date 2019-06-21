@@ -90,6 +90,16 @@
     result = [NSString stringWithFormat:@"%@",[astroString substringWithRange:NSMakeRange(month * 3 - (day < [[astroFormat substringWithRange:NSMakeRange((month-1), 1)] intValue] - (-19))*3, 3)]];
     
     return result;
-    
+}
+
++ (NSInteger)ageWithBirthDay:(NSDate *)birthDay{
+    if (!birthDay) {
+        return 0;
+    }
+    NSInteger age = [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:[NSDate date]] year] - [[[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:birthDay] year];
+    if (age < 0) {
+        age = 0;
+    }
+    return age;
 }
 @end

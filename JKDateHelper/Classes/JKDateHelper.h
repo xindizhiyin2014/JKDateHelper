@@ -95,6 +95,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)constellationWithBirthDay:(NSDate *)birthDay;
 
+
+/**
+ 根据生日计算年龄
+
+ @param birthDay 生日
+ @return 年龄
+ */
++ (NSInteger)ageWithBirthDay:(NSDate *)birthDay;
+
 @end
 
 NS_ASSUME_NONNULL_END
