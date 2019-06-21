@@ -19,16 +19,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//    NSString *fullTimeString = [JKDateHelper fullTimeStringFromDate:[NSDate date]];
+//    NSString *fullTimeString = [JKDateHelper fullTimeStrFromDate:[NSDate date]];
 //    NSLog(@"fullTimeString %@",fullTimeString);
     
-//    NSString *dayString = [JKDateHelper dayStringFromDate:[NSDate date] seperator:@""];
-//    NSLog(@"dayString %@",dayString);
+//    NSString *dayStr = [JKDateHelper dayStrFromDate:[NSDate date]];
+//    NSLog(@"dayStr %@",dayStr);
     
-//        NSString *timeString = [JKDateHelper timeStringFromDate:[NSDate date] seperator:nil];
-//        NSLog(@"timeString %@",timeString);
-//    NSDate *date = [JKDateHelper dateFromTimeString:fullTimeString formatString:@"yyyy/MM/dd HH:mm:ss"];
-//    NSLog(@"date %@",date);
+//    NSString *timeStr = [JKDateHelper timeStrFromDate:[NSDate date]];
+//    NSLog(@"timeStr %@",timeStr);
+    NSString *timeStr = @"10:46:52";
+    NSDate *date = [JKDateHelper dateFromTimeStr:timeStr formatStr:@"HH:mm:ss"];
+    NSLog(@"date %@",date);
+    
+
 }
 
 - (void)didReceiveMemoryWarning
