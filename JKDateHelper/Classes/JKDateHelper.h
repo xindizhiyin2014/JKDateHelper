@@ -61,6 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return 指定格式的字符串
  */
 + (NSString *)timeStrFromDate:(NSDate *)date;
+
 /**
  根据date将日期转换为格式, 例如: HH:mm:ss
  
@@ -95,7 +96,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)constellationWithBirthDay:(NSDate *)birthDay;
 
-
 /**
  根据生日计算年龄
 
@@ -103,6 +103,15 @@ NS_ASSUME_NONNULL_BEGIN
  @return 年龄
  */
 + (NSInteger)ageWithBirthDay:(NSDate *)birthDay;
+
+
+/**
+ 时间间隔描述
+
+ @param date 时间
+ @return 描述
+ */
++ (NSString*)timeIntervalDescWithDate:(NSDate *)date;
 
 @end
 

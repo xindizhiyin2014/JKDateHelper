@@ -339,10 +339,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JKDateHelper_Example/Pods-JKDateHelper_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JKDateHelper/JKDateHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/JKSandBoxManager/JKSandBoxManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKDateHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKSandBoxManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

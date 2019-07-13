@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by JackLee on 2019/7/13.
+  
+*/
+"JKDateHelper_amoment_ago" = "amoment ago";
+"JKDateHelper_seconds_ago" = " seconds ago";
+"JKDateHelper_minutes_ago" = " minutes ago";
+"JKDateHelper_hours_ago" = " hours ago";
+

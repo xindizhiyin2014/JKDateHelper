@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKDateHelper'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'this is a tool to help developer to convert the date to string or convert string to date.'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,11 @@ this is a tool to help developer to convert the date to string or convert string
 
   s.source_files = 'JKDateHelper/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'JKDateHelper' => ['JKDateHelper/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'JKDateHelper' => ['JKDateHelper/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'JKSandBoxManager'
 end

@@ -6,7 +6,7 @@
 //
 
 #import "JKDateHelper.h"
-
+#import <JKSandBoxManager/JKSandBoxManager.h>
 @implementation JKDateSeperator
 
 @end
@@ -78,7 +78,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:birthDay];
     
-    
     NSInteger month=[components month];
     NSInteger day=[components day];
     NSString * astroString = @"摩羯座水瓶座双鱼座白羊座金牛座双子座巨蟹座狮子座处女座天秤座天蝎座射手座摩羯座";
@@ -102,4 +101,49 @@
     }
     return age;
 }
+
++ (NSString*)timeIntervalDescWithDate:(NSDate *)date{
+    NSString *timeDesc;
+    NSTimeInterval distance = [[NSDate date] timeIntervalSinceDate:date];
+    if (distance < 0) distance = 0;
+    if (distance <=10) {
+        timeDesc = [JKSandBoxManager localizedStringForKey:@"JKDateHelper_amoment_ago" language:[self getCurrentLanguage] podName:@"JKDateHelper"];
+        return timeDesc;
+    }
+    if (distance < 60 & distance>10) {
+        timeDesc = [NSString stringWithFormat:@"%.0f%@", distance, [JKSandBoxManager localizedStringForKey:@"JKDateHelper_seconds_ago"  language:[self getCurrentLanguage] podName:@"JKDateHelper"]];
+    }
+    else if (distance < 60 * 60) {
+        distance = distance / 60;
+        timeDesc = [NSString stringWithFormat:@"%.0f%@", distance, [JKSandBoxManager localizedStringForKey:@"JKDateHelper_minutes_ago"  language:[self getCurrentLanguage] podName:@"JKDateHelper"]];
+    }
+    else if (distance < 60 * 60 * 6) {
+        distance = distance / 60 / 60;
+        timeDesc = [NSString stringWithFormat:@"%.0f%@", distance, [JKSandBoxManager localizedStringForKey:@"JKDateHelper_hours_ago"  language:[self getCurrentLanguage] podName:@"JKDateHelper"]];
+    }
+    else {
+        
+       NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+      [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+      timeDesc = [dateFormatter stringFromDate:date];
+
+    }
+    return timeDesc;
+}
+
++ (NSString *)getCurrentLanguage{
+    NSArray *languages = [NSLocale preferredLanguages];
+    NSString *language = [languages objectAtIndex:0];
+    
+    if ([language hasPrefix:@"zh"]) {//检测开头匹配，是否为中文
+        if ( [language containsString:@"Hans"] ) {
+            return @"zh-Hans";
+        }
+        else {
+            return @"zh-Hant";
+        }
+    }
+    return @"en";
+}
+
 @end

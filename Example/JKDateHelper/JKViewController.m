@@ -27,9 +27,11 @@
     
 //    NSString *timeStr = [JKDateHelper timeStrFromDate:[NSDate date]];
 //    NSLog(@"timeStr %@",timeStr);
-    NSString *timeStr = @"10:46:52";
-    NSDate *date = [JKDateHelper dateFromTimeStr:timeStr formatStr:@"HH:mm:ss"];
+    NSString *timeStr = @"2019/07/13 11:10:52";
+    NSDate *date = [JKDateHelper dateFromTimeStr:timeStr formatStr:@"yyyy/MM/dd HH:mm:ss"];
     NSLog(@"date %@",date);
+    NSString *timeIntervalDesc = [JKDateHelper timeIntervalDescWithDate:date];
+    NSLog(@"timeIntervalDesc %@",timeIntervalDesc);
     
 
 }

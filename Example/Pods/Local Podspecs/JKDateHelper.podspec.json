@@ -1,6 +1,6 @@
 {
   "name": "JKDateHelper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "this is a tool to help developer to convert the date to string or convert string to date.",
   "description": "this is a tool to help developer to convert the date to string or convert string to date.it will update with the need",
   "homepage": "https://github.com/xindizhiyin2014/JKDateHelper",
@@ -13,10 +13,20 @@
   },
   "source": {
     "git": "https://github.com/xindizhiyin2014/JKDateHelper.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "JKDateHelper/Classes/**/*"
+  "source_files": "JKDateHelper/Classes/**/*",
+  "resource_bundles": {
+    "JKDateHelper": [
+      "JKDateHelper/Assets/*"
+    ]
+  },
+  "dependencies": {
+    "JKSandBoxManager": [
+
+    ]
+  }
 }
